@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" >
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <ImageView
+            android:id="@+id/thumb_image"
+            android:layout_width="@dimen/list_activity_thumb_width"
+            android:layout_height="@dimen/list_activity_thumb_height"
+            android:layout_marginLeft="5dp"
+            android:src="@drawable/product_default" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <EditText
+                android:id="@+id/editText1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:contentDescription="title"
+                android:ems="10" >
+
+                <requestFocus />
+            </EditText>
+
+            <EditText
+                android:id="@+id/editText2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/editText1"
+                android:layout_alignParentBottom="true"
+                android:contentDescription="context"
+                android:ems="10" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/cancel_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/ok_Button"
+        android:layout_alignBottom="@+id/ok_Button"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="84dp"
+        android:text="Annuler" />
+
+    <Button
+        android:id="@+id/ok_Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/linearLayout1"
+        android:layout_marginLeft="116dp"
+        android:layout_marginTop="18dp"
+        android:layout_toRightOf="@+id/cancel_button"
+        android:text="Valider" />
+
+</RelativeLayout>
